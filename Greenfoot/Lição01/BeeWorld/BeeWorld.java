@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BeeWorld extends World
 {
-
+    //Campos e fields
+    private Abelha abelha = null;
+    
     /**
      * Constructor for objects of class BeeWorld.
      * 
@@ -25,12 +27,26 @@ public class BeeWorld extends World
      */
     private void prepare()
     {
-        Abelha abelha = new Abelha();
+        //Criar abelha
+        abelha = new Abelha();
         addObject(abelha,48,55);
+        //Criar aranha
         Aranha aranha = new Aranha();
         addObject(aranha,513,273);
-        Mosca mosca = new Mosca();
-        addObject(mosca,88,215);
-        mosca.setLocation(86,211);
+        //Utilizando o For para criar as moscas.
+        for (int i=0; i<20; i++){
+            int pX = Greenfoot.getRandomNumber(getWidth());
+            int pY = Greenfoot.getRandomNumber(getWidth());
+            int vel = Greenfoot.getRandomNumber(5)+1;
+            int ang = Greenfoot.getRandomNumber(360);
+            //Adicionando no mundo e criando a mosca ao mesmo tempo
+            addObject(new Mosca(vel,ang), pX, pY);
+        }
+    }
+    /**
+     * Getter para obter a instancia da abelha criada no mundo.
+     */
+    public Abelha getAbelha(){
+        return abelha;
     }
 }
