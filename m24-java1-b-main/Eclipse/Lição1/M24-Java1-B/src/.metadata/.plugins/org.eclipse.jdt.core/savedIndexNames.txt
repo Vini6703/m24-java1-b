@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Aluno\Documents\AliceProjetos\Vinicius\m24-java1-b-main\Eclipse\Lição1\M24-Java1-B\src\.metadata\.plugins\org.eclipse.jdt.core
+2489149132.index
+3656596875.index
+1865797976.index
