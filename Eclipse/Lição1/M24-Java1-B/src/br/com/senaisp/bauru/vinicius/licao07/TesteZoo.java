@@ -3,7 +3,7 @@ package br.com.senaisp.bauru.vinicius.licao07;
 public class TesteZoo {
 
 	public static void main(String[] args) {
-		Mamifero mam = new Cachorro();
+		Mamifero mam = new Gato(5,"Neco");
 		mam.setCor("Caramelo");
 		mam.setNome("Totó");
 		mam.setIdade(3);
